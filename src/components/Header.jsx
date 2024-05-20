@@ -1,16 +1,44 @@
 import { useLocation } from "react-router-dom";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { brainwave } from "../assets"; //Do not forget to import everytime you want to display something on the browser
 import { navigation } from '../constants';
 import Button from "./Button";
 import MenuSVG from "../assets/svg/MenuSvg";
-import { HamburgerMenu } from "./design/Header"; //combine this to the meny 
+import { HamburgerMenu } from "./design/Header"; //combine this to the menu
 import { useState } from "react";
 
 const Header = () =>
 {
-  const path = useLocation()
+  const path = useLocation();
   const [openNavigation, setOpenNavigation] = useState
     (false);
+
+  /**
+   *The `toggleNavigation` function is used to switch the `openNavigation` state between `true` and `false`. 
+  function for navigation checking if is going to open or close the navigation bar
+   */
+  const toggleNavigation = () =>
+  {
+    if (openNavigation)
+    {
+      setOpenNavigation(false);
+      enablePageScroll();
+    } else
+    {
+      setOpenNavigation(true);
+      disablePageScroll();
+    }
+  };
+
+  //function for handling click when cliclking the navigation close automatically 
+  const handleClick = () =>
+  {
+    if (!openNavigation) return;
+    enablePageScroll();
+    setOpenNavigation(false); //when the navigation is open it will close automatically
+  };
+
+
   return (
     /*
   This is the Header component. It returns a div that is styled to be a fixed header at the top of the page.
@@ -22,8 +50,8 @@ const Header = () =>
   At screen sizes larger than 'lg', it also adds vertical padding (py-4).
   */
     //This is the navigation bar on the top of the screen (REMEMBER THAT)
-    <div className={`fixed top-0 lef-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90
-    lg:backdrop-blur-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'}`}
+    <div className={`fixed top-0 left-0 w-full z-50 border-b
+     ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'}`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
@@ -32,12 +60,15 @@ const Header = () =>
     it will also serve as a clickable link. */ }
           <img src={brainwave} width={190} height={40} alt="brainwave" />
         </a>
-        {/* //This is the navigation bar */}
-        <nav className="fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex
-     lg:mx-auto lg:bg-transparent ">
+        {/* //This is the navigation bar The nav bar was incorrect at first */}
+        <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
+
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
-              <a key={item.id} href={item.url} className={`block relative font-code text-2xl upercase
+              <a key={item.id}
+                href={item.url}
+                onClick={handleClick}
+                className={`block relative font-code text-2xl upercase
               text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile} ? "lg:hidden" : ""
              } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold item.url === pathname.hash
              ? "z-2 lg:text-n-1"
@@ -48,6 +79,7 @@ const Header = () =>
               </a>
             ))}
           </div>
+          <HamburgerMenu />
         </nav>
         <a href="#signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
@@ -57,7 +89,12 @@ const Header = () =>
         <Button className="hidden lg:flex" href="#login">
           Sign in
         </Button>
-
+        <Button className="ml-auto lg:hidden"
+          px="px-3"
+          onClick={toggleNavigation}
+        >
+          <MenuSVG openNavigation={openNavigation} />
+        </Button>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import { background } from "../../assets";
 
+//this is for the header remember that the tricks to use absolute and inset-0 to make the background full screen
+
 export const Rings = () =>
 {
   return (
@@ -31,6 +33,7 @@ export const BackgroundCircles = () =>
   );
 };
 
+//hambuger menu for mobile view and tablet view
 export const HamburgerMenu = () =>
 {
   return (
