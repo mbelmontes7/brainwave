@@ -2,10 +2,15 @@ import { useLocation } from "react-router-dom";
 import { brainwave } from "../assets"; //Do not forget to import everytime you want to display something on the browser
 import { navigation } from '../constants';
 import Button from "./Button";
+import MenuSVG from "../assets/svg/MenuSvg";
+import { HamburgerMenu } from "./design/Header"; //combine this to the meny 
+import { useState } from "react";
 
 const Header = () =>
 {
   const path = useLocation()
+  const [openNavigation, setOpenNavigation] = useState
+    (false);
   return (
     /*
   This is the Header component. It returns a div that is styled to be a fixed header at the top of the page.
@@ -17,8 +22,9 @@ const Header = () =>
   At screen sizes larger than 'lg', it also adds vertical padding (py-4).
   */
     //This is the navigation bar on the top of the screen (REMEMBER THAT)
-    <div className="fixed top-0 lef-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90
-    lg:backdrop-blur-sm">
+    <div className={`fixed top-0 lef-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90
+    lg:backdrop-blur-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'}`}
+    >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
           { /* This code is used to render an image to the browser. 
