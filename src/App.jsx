@@ -1,6 +1,6 @@
 import ButtonGradient from "./assets/svg/ButtonGradient"; //always check the import bro fucking shit 
-import Button from "./components/Button";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 
 const App = () =>
@@ -13,6 +13,7 @@ const App = () =>
         {/* The Header component is displayed in the browser because 
       The Header component is displayed because it's rendered within App, the root component.*/}
         <Header />
+        <Hero />
 
       </div>
       <ButtonGradient />
