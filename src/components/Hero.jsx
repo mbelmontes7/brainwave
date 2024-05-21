@@ -1,4 +1,4 @@
-import { curve } from "../assets";
+import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button"
 import Section from "./Section";
 
@@ -34,17 +34,29 @@ const Hero = () =>
                     Unleash the power of AI within Brainwave. Upgrade your productivity
                     with Brainwave, the open AI chat app.
                 </p>
-                <Button href="/pricing" white>
-                    Get started
-                </Button>
-            </div>
-            <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
-                <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
-                    <div className="relative bg-n-8 rounded-[1rem]">
-                        <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
-
+                {/* Center the Button component */}
+                <div className="flex justify-center m-12">
+                    <Button href="/pricing" white>
+                        Get started
+                    </Button>
+                </div>
+                {/* //container for the gradient for the rest of the code this is the code for the line hardcore code */}
+                <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+                    <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+                        <div className="relative bg-n-8 rounded-[1rem]">
+                            <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
+                            {/* //this is the code for the gradient box that is going to containg the image of the robot */}
+                            <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+                                <img
+                                    src={robot}
+                                    className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
+                                    width={1024}
+                                    height={490}
+                                    alt="AI"
+                                />
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
 
