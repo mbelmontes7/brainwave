@@ -1,12 +1,17 @@
 import { curve, heroBackground, robot } from "../assets";
-import Button from "./Button"
+import Button from "./Button";
 import Section from "./Section";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { heroIcons } from "../constants";
+import { ScrollParallax } from "react-just-parallax";
+
 
 const Hero = () =>
 {
     return (
         <Section
-            className="pt-[1rem] -mt-[5.25]"
+            //how the image is far from the header 
+            className="pt-[1rem] -mt-[5.35]"
             crosses
             crossesOffset="lg:translate-y-[5.25rem]"
             customPaddings
@@ -17,7 +22,7 @@ const Hero = () =>
                 </div>
                 {/* // Button component is rendered in the browser because it's rendered within the Hero component. */}
                 <h1 className="h1 mb-6">
-                    Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
+                    Explore the Possibilities
 
                     <span className="inline-block relative">
                         Brainwave{" "}
@@ -35,17 +40,19 @@ const Hero = () =>
                     with Brainwave, the open AI chat app.
                 </p>
                 {/* Center the Button component */}
-                <div className="flex justify-center m-12">
+                <div className="flex justify-center m-10">
                     <Button href="/pricing" white>
                         Get started
                     </Button>
                 </div>
+
                 {/* //container for the gradient for the rest of the code this is the code for the line hardcore code */}
                 <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
-                    <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+                    <div className="relative z-10 p-0.5 rounded-2xl bg-conic-gradient">
+                        {/* //this is the code for the gradient box that is going to contain the image of the robot */}
                         <div className="relative bg-n-8 rounded-[1rem]">
                             <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
-                            {/* //this is the code for the gradient box that is going to containg the image of the robot */}
+                            {/* //this is the code for the gradient box that is going to contain the image of the robot aspect ratio this would make it look good for all devices and screen sizes*/}
                             <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                                 <img
                                     src={robot}
@@ -57,10 +64,27 @@ const Hero = () =>
                             </div>
                         </div>
                     </div>
+
+                    {/* Background image behind the robot image play around it with it later beceause this thing is too confusing 
+                                keep in note the The z-index CSS property sets the z-order of a positioned element and its 
+                                descendants or 
+                                flex items. Overlapping elements with a larger z-index cover those with a smaller one.
+                                that is what it should be like: 
+                                          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+
+                                */}
+                    <div className="absolute inset-y-0.25   ">
+                        <img
+                            src={heroBackground}
+                            className="w-full"
+                            width={1440}
+                            height={1800}
+                            alt="Hero background"
+                        />
+                    </div>
                 </div>
             </div>
-
-        </Section >
+        </Section>
     );
 };
 
