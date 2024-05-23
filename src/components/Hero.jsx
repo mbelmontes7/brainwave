@@ -4,10 +4,13 @@ import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
+import { useRef } from "react";
 
 
 const Hero = () =>
 {
+    const parallaxRef = useRef(null);
+
     return (
         <Section
             //how the image is far from the header 
@@ -17,7 +20,7 @@ const Hero = () =>
             customPaddings
             id="Hero"
         >
-            <div className="container relative">
+            <div className="container relative" ref={{parallaxRef}} >
                 <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
                 </div>
                 {/* // Button component is rendered in the browser because it's rendered within the Hero component. */}
@@ -61,8 +64,22 @@ const Hero = () =>
                                     height={490}
                                     alt="AI"
                                 />
+                                {/* //this is from the package react-just-parallax */}
+                                <ScrollParallax isAbsolutelyPositioned>
+                                    {/* //this is also how to make the cute white background for the icons */}
+                                    <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                                        {heroIcons.map((icon, index) => (
+                                            <li className="p-5" key={index}>
+                                                {/* //the menu for the icon and it flows the parrallax effect */}
+                                                <img src={icon} width={24} height={25} alt={icon} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollParallax>
+
                             </div>
                         </div>
+                        <Gradient />
                     </div>
 
                     {/* Background image behind the robot image play around it with it later beceause this thing is too confusing 
@@ -82,6 +99,8 @@ const Hero = () =>
                             alt="Hero background"
                         />
                     </div>
+                    {/* //render the background circles */}
+                    <BackgroundCircles/>
                 </div>
             </div>
         </Section>
