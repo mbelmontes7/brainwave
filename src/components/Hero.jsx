@@ -20,12 +20,13 @@ const Hero = () =>
             customPaddings
             id="Hero"
         >
-            <div className="container relative" ref={{parallaxRef}} >
+            <div className="container relative" ref={{ parallaxRef }} >
                 <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
                 </div>
                 {/* // Button component is rendered in the browser because it's rendered within the Hero component. */}
                 <h1 className="h1 mb-6">
-                    Explore the Possibilities
+                    {/* stands for non-breaking space it is used to create a space in text that cannot be broken - */}
+                    Explore the Possibilities & of &nbsp;AI&nbsp; chatting with{" "}
 
                     <span className="inline-block relative">
                         Brainwave{" "}
@@ -100,7 +101,7 @@ const Hero = () =>
                         />
                     </div>
                     {/* //render the background circles */}
-                    <BackgroundCircles/>
+                    <BackgroundCircles />
                 </div>
             </div>
         </Section>
