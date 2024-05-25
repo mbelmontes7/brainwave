@@ -83,6 +83,16 @@ const Hero = () =>
                                         ))}
                                     </ul>
                                 </ScrollParallax>
+                                {/* Here, ScrollParallax is the parent component, and Notification is a child component. */}
+                                <ScrollParallax isAbsolutelyPositioned>
+                                    <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                                        {heroIcons.map((icon, index) => (
+                                            <li className="p-5" key={index}>
+                                                <img src={icon} width={24} height={25} alt={icon} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollParallax>
 
                             </div>
                         </div>
