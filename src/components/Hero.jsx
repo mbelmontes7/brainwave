@@ -28,7 +28,7 @@ const Hero = () =>
                 <h1 className="h1 mb-6">
                     {/* stands for non-breaking space it is used to create a space in text that cannot be broken - */}
                     Explore the Possibilities & of &nbsp;AI&nbsp; chatting with{" "}
-                    {/* Test comment */}
+
                     <span className="inline-block relative">
                         Brainwave{" "}
                         <img
