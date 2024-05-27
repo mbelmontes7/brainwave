@@ -6,6 +6,7 @@ import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./Generating";
+import Notification from "./Notification";
 
 
 const Hero = () =>
@@ -28,7 +29,7 @@ const Hero = () =>
                 <h1 className="h1 mb-6">
                     {/* stands for non-breaking space it is used to create a space in text that cannot be broken - */}
                     Explore the Possibilities & of &nbsp;AI&nbsp; chatting with{" "}
-                    {/* Test comment */}
+                   
                     <span className="inline-block relative">
                         Brainwave{" "}
                         <img
@@ -84,16 +85,14 @@ const Hero = () =>
                                     </ul>
                                 </ScrollParallax>
                                 {/* Here, ScrollParallax is the parent component, and Notification is a child component. */}
-                                <ScrollParallax isAbsolutelyPositioned>
-                                    <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
-                                        {heroIcons.map((icon, index) => (
-                                            <li className="p-5" key={index}>
-                                                <img src={icon} width={24} height={25} alt={icon} />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </ScrollParallax>
-
+                             
+                <ScrollParallax isAbsolutelyPositioned>
+                  <Notification
+                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                    //this title is the parent of the notification component
+                    title="Code generation"
+                  />
+                </ScrollParallax>   
                             </div>
                         </div>
                         <Gradient />
