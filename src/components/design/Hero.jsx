@@ -61,7 +61,7 @@ export const BackgroundCircles = ({ parallaxRef }) =>
  * - parallaxRef: A ref object that is passed to the MouseParallax component.
  * 
  * State:
- * - mounted: A boolean state that is initially false and is set to true after the component mounts.
+ * - mounted: A boolean state that is initially false and is set to true afte r the component mounts.
  * 
  * The component uses the useEffect hook to set the 'mounted' state to true after the initial render.
  * 

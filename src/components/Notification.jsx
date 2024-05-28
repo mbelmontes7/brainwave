@@ -10,6 +10,7 @@ const Notification = ({ className, title }) =>
             //backdrop to make it feel like is grass Asi como que se ve hace 
                 } flex items-center p-4 pr-6 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl gap-5`}
         >
+            {/* //this is the notification image that is going to be displayed in the notification coming from assets */}
             <img
                 src={notification1}
                 width={62}
@@ -39,6 +40,7 @@ const Notification = ({ className, title }) =>
                             </li>
                         ))}
                     </ul>
+                    {/* //this is the time of the notification with the class name this is cool!  */}
                     <div className="body-2 text-n-13">1m ago</div>
                 </div>
             </div>

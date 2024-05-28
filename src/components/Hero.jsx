@@ -29,7 +29,7 @@ const Hero = () =>
                 <h1 className="h1 mb-6">
                     {/* stands for non-breaking space it is used to create a space in text that cannot be broken - */}
                     Explore the Possibilities & of &nbsp;AI&nbsp; chatting with{" "}
-                   
+
                     <span className="inline-block relative">
                         Brainwave{" "}
                         <img
@@ -68,6 +68,7 @@ const Hero = () =>
                                     alt="AI"
                                 />
                                 {/* //pass additional props and style to it  */}
+
                                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
 
@@ -85,14 +86,14 @@ const Hero = () =>
                                     </ul>
                                 </ScrollParallax>
                                 {/* Here, ScrollParallax is the parent component, and Notification is a child component. */}
-                             
-                <ScrollParallax isAbsolutelyPositioned>
-                  <Notification
-                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    //this title is the parent of the notification component
-                    title="Code generation"
-                  />
-                </ScrollParallax>   
+
+                                <ScrollParallax isAbsolutelyPositioned>
+                                    <Notification
+                                        className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                                        //this title is the parent of the notification component
+                                        title="Code generation"
+                                    />
+                                </ScrollParallax>
                             </div>
                         </div>
                         <Gradient />
