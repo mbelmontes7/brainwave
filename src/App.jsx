@@ -1,6 +1,7 @@
 import ButtonGradient from "./assets/svg/ButtonGradient"; //always check the import bro fucking shit 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Benefits from "./components/Benefits";
 
 
 const App = () =>
@@ -14,6 +15,7 @@ const App = () =>
       The Header component is displayed because it's rendered within App, the root component.*/}
         <Header />
         <Hero />
+        <Benefits/>
 
       </div>
       <ButtonGradient />
