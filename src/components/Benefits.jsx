@@ -49,6 +49,7 @@ const Benefits = () => {
 
               <div
                 className="absolute inset-0.5 bg-n-8"
+                // The clipPath property uses an SVG element with the id "benefits" to define a clipping region. Only the part of the element within this region will be visible.
                 style={{ clipPath: "url(#benefits)" }}
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
