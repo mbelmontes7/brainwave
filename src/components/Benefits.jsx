@@ -19,8 +19,10 @@ const Benefits = () => {
           {benefits.map((item) => (
             // This is the benefits component that is used to display the benefits of the product
             <div
+            // bg-[length:100%_100%] sets the background image size to cover the entire width and height of the element it is applied to, without repeating.
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
+                //for each one of this card getting a diffrenct url for the background image
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}
               key={item.id}
