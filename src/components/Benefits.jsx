@@ -52,6 +52,8 @@ const Benefits = () => {
                 // The clipPath property uses an SVG element with the id "benefits" to define a clipping region. Only the part of the element within this region will be visible.
                 style={{ clipPath: "url(#benefits)" }}
               >
+                {/* //if the item has an image url then it will render the image on every card  also that is how to hover 
+                this is useful to know because the user when the user hover over it will be the image only while the user over*/}
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
                   {item.imageUrl && (
                     <img
