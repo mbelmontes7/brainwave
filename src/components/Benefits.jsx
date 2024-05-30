@@ -43,7 +43,8 @@ const Benefits = () => {
                   <Arrow />
                 </div>
               </div>
-
+              {/* //if the item has a light gradient then it will render the gradient light component on every card 
+              every time they click on */}
               {item.light && <GradientLight />}
 
               <div
