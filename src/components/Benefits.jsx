@@ -15,7 +15,9 @@ const Benefits = () => {
         />
 
         <div className="flex flex-wrap gap-10 mb-1">
+        {/* Creates an Element: For each item, it creates a new React element (like a piece of the webpage) */}
           {benefits.map((item) => (
+            // This is the benefits component that is used to display the benefits of the product
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
