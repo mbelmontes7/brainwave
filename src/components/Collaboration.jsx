@@ -20,6 +20,8 @@ const Collaboration = () =>
                     <ul className="max-w-[22rem] mb-10 md:mb-14">
                         {/* //this is what you map over each item in the collabContent array */}
                         {collabContent.map((item) => (
+                            // The heading "AI Chat App for seamless collaboration" is displayed first
+             // Then, it maps over the collabContent array to create a list of features. Each feature has a checkmark image, a title, and optionally some text.
                             <li className="mb-3 py-3" key={item.id}>
                                 <div className="flex items-center">
                                     <img src={check} width={24} height={24} alt="check" />
