@@ -10,13 +10,15 @@ const Collaboration = () =>
         //wrapping the content of the section in a div with a class of container and lg:flex 
         //Also aplying crosses to the section so is not boring when the user is scrolling
         <Section crosses>
+            {/* //The outer div is a container that becomes a flexible box on large screens. Inside, there's another div with a maximum width of 25rem. */}
             <div className="container lg:flex">
                 <div className="max-w-[25rem]">
                     <h2 className="h2 mb-4 md:mb-8">
                         AI Chat App for seamless collaboration
                     </h2>
-
+                    {/* //This is the list of the collaboration content that is going to be displayed in the browser */}
                     <ul className="max-w-[22rem] mb-10 md:mb-14">
+                        {/* //this is what you map over each item in the collabContent array */}
                         {collabContent.map((item) => (
                             <li className="mb-3 py-3" key={item.id}>
                                 <div className="flex items-center">
