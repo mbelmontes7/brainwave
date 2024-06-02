@@ -21,7 +21,7 @@ const Collaboration = () =>
                         {/* //this is what you map over each item in the collabContent array */}
                         {collabContent.map((item) => (
                             // The heading "AI Chat App for seamless collaboration" is displayed first
-             // Then, it maps over the collabContent array to create a list of features. Each feature has a checkmark image, a title, and optionally some text.
+                            // Then, it maps over the collabContent array to create a list of features. Each feature has a checkmark image, a title, and optionally some text.
                             <li className="mb-3 py-3" key={item.id}>
                                 <div className="flex items-center">
                                     <img src={check} width={24} height={24} alt="check" />
@@ -38,16 +38,16 @@ const Collaboration = () =>
                 </div>
 
                 <div className="lg:ml-auto xl:w-[38rem] mt-4">
-                    <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+                    <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto"> 
                         {collabText}
                     </p>
-
-                    <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
+                    {/* //In here you can see the outer most circle of the code */}
+                        <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
                         <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
                             <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                                     <img
-                                        src={brainwaveSymbol}
+                                        src={brainwaveSymbol} 
                                         width={48}
                                         height={48}
                                         alt="brainwave"
