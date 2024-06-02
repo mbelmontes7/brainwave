@@ -3,12 +3,13 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
+import Services from "./components/services";
 
 
 const App = () =>
 {
   return (
-    <> 
+    <>
 
       <div className="pt-[4.75rem] lg:pt[5.25rem]
       overflow-hidden">
@@ -16,8 +17,9 @@ const App = () =>
       The Header component is displayed because it's rendered within App, the root component.*/}
         <Header />
         <Hero />
-        <Benefits/>
-        <Collaboration/>
+        <Benefits />
+        <Collaboration />
+        <Services/>
 
       </div>
       <ButtonGradient />
