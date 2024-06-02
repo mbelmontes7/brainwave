@@ -57,7 +57,7 @@ const Collaboration = () =>
                                 </div>
                             </div>
                         </div>
-                        {/* //this UL is going to */}
+
                         <ul>
                             {collabApps.map((app, index) => (
                                 <li
