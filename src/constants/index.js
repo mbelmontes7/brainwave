@@ -66,6 +66,7 @@ import {
   
   export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
   
+  //this is the import that is coming from from servicer that is located on the services component 
   export const brainwaveServices = [
     "Photo generating",
     "Photo enhance",

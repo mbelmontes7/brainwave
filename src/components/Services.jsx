@@ -32,7 +32,7 @@ const Services = () =>
                         <p className="body-2 mb-[3rem] text-n-3">
                             Brainwave unlocks the potential of AI-powered applications
                         </p>
-
+                        {/* //this is where the list of check marks are coming from on the index file you get each item on the index  */}
                         <ul className="body-2">
                             {brainwaveServices.map((item, index) => (
                                 <li
