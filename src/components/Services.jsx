@@ -59,7 +59,7 @@ const Services = () =>
                   alt="robot"
                 />
               </div>
-
+                {/* this is the div inside the letters in the boxing focusing on the justify end which put is on the bottom  */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <h4 className="h4 mb-4">Photo editing</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
