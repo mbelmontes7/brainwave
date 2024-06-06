@@ -3,7 +3,12 @@ import Heading from "./Heading"
 import { service1, service2, service3, check } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Generating from "./Generating";
-
+import {
+  PhotoChatMessage,
+  Gradient,
+  VideoBar,
+  VideoChatMessage,
+} from "./design/Services";
 const Services = () =>
 {
   return (
@@ -62,6 +67,7 @@ const Services = () =>
                 {/* this is the div inside the letters in the boxing focusing on the justify end which put is on the bottom  */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <h4 className="h4 mb-4">Photo editing</h4>
+                {/* // apostrophe  this is how is use for good practice  */}
                 <p className="body-2 mb-[3rem] text-n-3">
                   Automatically enhance your photos using our AI app&apos;s
                   photo editing feature. Try it now!
