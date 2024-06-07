@@ -82,21 +82,24 @@ const Services = () =>
               {/* //is a self alone div that is import and then render here in the box  */}
               <PhotoChatMessage />
             </div>
-
+            {/* THIS would create space on the layout of the desing */}
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
+                {/* //this would creare the video generation  */}
                 <h4 className="h4 mb-4">Video generation</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
                   The world’s most powerful AI photo and video art generation
                   engine. What will you create?
                 </p>
-
+                {/* //this is going to be map over the things selected lista no ordenada en html */}
                 <ul className="flex items-center justify-between">
+                  {/* Aquí iría el contenido del elemento <li>, como un ícono */}
                   {brainwaveServicesIcons.map((item, index) => (
                     <li
                       key={index}
                       className={`rounded-2xl flex items-center justify-center ${index === 2
                         ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
+                        //else if is not the currecly seclected one
                         : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
                         }`}
                     >
@@ -132,7 +135,7 @@ const Services = () =>
           <Gradient />
         </div>
       </div>
-    </Section>
+    </Section >
   );
 };
 
