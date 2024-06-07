@@ -1,8 +1,7 @@
-import Section from "./Section"
-import Heading from "./Heading"
+import Section from "./Section";
+import Heading from "./Heading";
 import { service1, service2, service3, check } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
-import Generating from "./Generating";
 import
 {
   PhotoChatMessage,
@@ -10,17 +9,25 @@ import
   VideoBar,
   VideoChatMessage,
 } from "./design/Services";
+
+import Generating from "./Generating";
+
 const Services = () =>
 {
   return (
+    // Componente <Section> que se usa para definir una sección de la página web.
+    // Se le pasa el prop id con el valor "how-to-use" para identificar esta sección.
     <Section id="how-to-use">
+      {/* // Dentro del componente <Section>, se usa un div con la clase "container".
+  // Esto generalmente se usa para aplicar estilos y restricciones de diseño a los elementos internos. */}
       <div className="container">
         <Heading
           title="Generative AI made for creators."
           text="Brainwave unlocks the potential of AI-powered applications"
         />
-
+        {/* POSITION DE elemento para contolar la relativa en z-1 */}
         <div className="relative">
+          {/* El índice z controla el orden de apilamiento de los elementos */}
           <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
               <img
@@ -31,7 +38,7 @@ const Services = () =>
                 src={service1}
               />
             </div>
-
+            {/* apilamento en el contexto en z-index ayuda cual va en orden y que tal esta en el orden */}
             <div className="relative z-1 max-w-[17rem] ml-auto">
               <h4 className="h4 mb-4">Smartest AI</h4>
               <p className="body-2 mb-[3rem] text-n-3">
@@ -54,7 +61,6 @@ const Services = () =>
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            {/* //this is where the boarder is made and how is implementing in this code  */}
             <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
                 <img
@@ -68,7 +74,6 @@ const Services = () =>
               {/* this is the div inside the letters in the boxing focusing on the justify end which put is on the bottom  */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <h4 className="h4 mb-4">Photo editing</h4>
-                {/* // apostrophe  this is how is use for good practice  */}
                 <p className="body-2 mb-[3rem] text-n-3">
                   Automatically enhance your photos using our AI app&apos;s
                   photo editing feature. Try it now!
@@ -78,12 +83,57 @@ const Services = () =>
               <PhotoChatMessage />
             </div>
 
+            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+              <div className="py-12 px-4 xl:px-8">
+                <h4 className="h4 mb-4">Video generation</h4>
+                <p className="body-2 mb-[2rem] text-n-3">
+                  The world’s most powerful AI photo and video art generation
+                  engine. What will you create?
+                </p>
+
+                <ul className="flex items-center justify-between">
+                  {brainwaveServicesIcons.map((item, index) => (
+                    <li
+                      key={index}
+                      className={`rounded-2xl flex items-center justify-center ${index === 2
+                        ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
+                        : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
+                        }`}
+                    >
+                      <div
+                        className={
+                          index === 2
+                            ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
+                            : ""
+                        }
+                      >
+                        <img src={item} width={24} height={24} alt={item} />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
+                <img
+                  src={service3}
+                  className="w-full h-full object-cover"
+                  width={520}
+                  height={400}
+                  alt="Scary robot"
+                />
+
+                <VideoChatMessage />
+                <VideoBar />
+              </div>
+            </div>
           </div>
+
+          <Gradient />
         </div>
       </div>
-
     </Section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
