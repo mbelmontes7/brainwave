@@ -3,7 +3,8 @@ import Heading from "./Heading"
 import { service1, service2, service3, check } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Generating from "./Generating";
-import {
+import
+{
   PhotoChatMessage,
   Gradient,
   VideoBar,
@@ -64,7 +65,7 @@ const Services = () =>
                   alt="robot"
                 />
               </div>
-                {/* this is the div inside the letters in the boxing focusing on the justify end which put is on the bottom  */}
+              {/* this is the div inside the letters in the boxing focusing on the justify end which put is on the bottom  */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <h4 className="h4 mb-4">Photo editing</h4>
                 {/* // apostrophe  this is how is use for good practice  */}
@@ -73,7 +74,8 @@ const Services = () =>
                   photo editing feature. Try it now!
                 </p>
               </div>
-              <PhotoChatMessage/>
+              {/* //is a self alone div that is import and then render here in the box  */}
+              <PhotoChatMessage />
             </div>
 
           </div>
