@@ -116,7 +116,7 @@ const Services = () =>
                   ))}
                 </ul>
               </div>
-
+              {/* //all the things are going to be positiong themselves  */}
               <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
                 <img
                   src={service3}
@@ -131,7 +131,7 @@ const Services = () =>
               </div>
             </div>
           </div>
-
+          {/* //You can also see the gradient here and is crazy how oit looks like behind the images and the boarders */}
           <Gradient />
         </div>
       </div>
