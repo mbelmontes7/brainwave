@@ -1,7 +1,8 @@
 import { brainwaveWhiteSymbol, gradient, play } from "../../assets";
 import ChatBubbleWing from "../../assets/svg/ChatBubbleWing";
 
-export const Gradient = () => {
+export const Gradient = () =>
+{
   return (
     <div className="absolute top-0 -left-[10rem] w-[56.625rem] h-[56.625rem] opacity-50 mix-blend-color-dodge pointer-events-none">
       <img
@@ -15,7 +16,8 @@ export const Gradient = () => {
   );
 };
 
-export const PhotChatMessage = () => {
+export const PhotoChatMessage = () =>
+{
   return (
     <div className="absolute top-8 right-8 max-w-[17.5rem] py-6 px-8 bg-black rounded-t-xl rounded-bl-xl font-code text-base lg:top-16 lg:right-[8.75rem] lg:max-w-[17.5rem]">
       Hey Brainwave, enhance this photo
@@ -24,7 +26,8 @@ export const PhotChatMessage = () => {
   );
 };
 
-export const VideoChatMessage = () => {
+export const VideoChatMessage = () =>
+{
   return (
     <div className="absolute top-8 left-[3.125rem] w-full max-w-[14rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[17.5rem]">
       Video generated!
@@ -47,7 +50,8 @@ export const VideoChatMessage = () => {
   );
 };
 
-export const VideoBar = () => {
+export const VideoBar = () =>
+{
   return (
     <div className="absolute left-0 bottom-0 w-full flex items-center p-6">
       <img

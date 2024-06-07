@@ -73,6 +73,7 @@ const Services = () =>
                   photo editing feature. Try it now!
                 </p>
               </div>
+              <PhotoChatMessage/>
             </div>
 
           </div>
