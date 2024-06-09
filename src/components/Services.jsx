@@ -103,7 +103,7 @@ const Services = () =>
                         : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
                         }`}
                     >
-                         {/* 
+                      {/* 
                          : Is this car the third car. This means you are looking at each car one by one. The index is the position of the car (0, 1, 2, 3)
                          */}
                       <div
@@ -113,6 +113,7 @@ const Services = () =>
                             : ""
                         }
                       >
+                        {/* This is inside the image little circles on the video generation  */}
                         <img src={item} width={24} height={24} alt={item} />
                       </div>
                     </li>
@@ -128,7 +129,6 @@ const Services = () =>
                   height={400}
                   alt="Scary robot"
                 />
-
                 <VideoChatMessage />
                 <VideoBar />
               </div>
