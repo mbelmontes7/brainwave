@@ -56,7 +56,7 @@ const Services = () =>
                 ))}
               </ul>
             </div>
-
+                {/* //this is a self imporiting div from the al generating where it says smartest AI  */}
             <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
           </div>
 

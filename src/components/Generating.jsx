@@ -1,13 +1,13 @@
 import { loading } from "../assets";
 
-const Generating = ({ className }) => {
+const Generating = ({ className }) =>
+{
   return (
     <div
-      className={`flex items-center h-[3.5rem] px-6 bg-n-8/80 rounded-[1.7rem] ${
-        className || ""
-      } text-base`}
+      className={`flex items-center h-[3.5rem] px-6 bg-n-8/80 rounded-[1.7rem] ${className || ""
+        } text-base`}
     >
-        {/* //This is the loading component that is used to display the loading animation */}
+      {/* //This is the loading component that is used to display the loading animation */}
       <img className="w-5 h-5 mr-4" src={loading} alt="Loading" />
       AI is generating
     </div>
