@@ -144,6 +144,7 @@ import {
       width: 26,
       height: 36,
     },
+    //The notion icon it was import as a svg file and executed in the main component which is on the collaboration it map over all of this items 
     {
       id: "1",
       title: "Notion",
