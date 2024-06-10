@@ -5,7 +5,9 @@ import Button from "./Button";
 const PricingList = () =>
 {
   return (
-    <div className="flex gap-[1rem] max-lg:flex-wrap">
+    // A div container with flexbox layout, spacing between items of 1rem,
+    // and wrapping of items when the screen size is below the "lg" breakpoint
+     <div className="flex gap-[1rem] max-lg:flex-wrap">
       {pricing.map((item) => (
         <div
           key={item.id}
