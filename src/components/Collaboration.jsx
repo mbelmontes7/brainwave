@@ -81,7 +81,6 @@ const Collaboration = () =>
                                 </li>
                             ))}
                         </ul>
-
                         <LeftCurve />
                         <RightCurve />
                     </div>

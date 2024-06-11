@@ -39,7 +39,11 @@ const PricingList = () =>
           </div>
 
           <Button
+            //this is giving the button the margin bottom and what is stands on
             className="w-full mb-6"
+            // The URL the button links to:
+            // If item.price exists, it links to the "/pricing" page
+            // Otherwise, it opens an email client to send an email to contact@jsmastery.pro
             href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
             white={!!item.price}
           >
