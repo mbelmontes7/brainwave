@@ -54,8 +54,9 @@ const PricingList = () =>
             to return if the condition is false  */}
             {item.price ? "Get started" : "Contact us"}
           </Button>
-
+          {/* Following with an unorded list that is going to inside the cards of the pricing  */}
           <ul>
+            {/* //This is an array containing a list of features. Represents the current index of the element in the arra */}
             {item.features.map((feature, index) => (
               <li
                 key={index}
