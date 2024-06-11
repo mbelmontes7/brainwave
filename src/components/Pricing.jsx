@@ -29,7 +29,9 @@ const PricingList = () =>
 
           <div className="flex items-center h-[5.5rem] mb-6">
             {item.price && (
+              //using fragments to Grouping Multiple Elements
               <>
+                {/* You might use leading-none when you want the text lines to be tightly packed together, without any extra spacing. This can be useful for large, single-line text elements where you want the text to occupy a precise amount of vertical space. */}
                 <div className="h3">$</div>
                 <div className="text-[5.5rem] leading-none font-bold">
                   {item.price}
