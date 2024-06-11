@@ -47,6 +47,7 @@ const PricingList = () =>
             // If item.price exists, it links to the "/pricing" page
             // Otherwise, it opens an email client to send an email to contact@jsmastery.pro
             href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
+            //Using !! converts any value to a boolean (true or false). It's used to ensure React props expecting booleans receive strictly true or false values, improving clarity and reliability.
             white={!!item.price}
           >
             {item.price ? "Get started" : "Contact us"}
