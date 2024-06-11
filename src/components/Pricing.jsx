@@ -50,6 +50,8 @@ const PricingList = () =>
             //Using !! converts any value to a boolean (true or false). It's used to ensure React props expecting booleans receive strictly true or false values, improving clarity and reliability.
             white={!!item.price}
           >
+            {/* //the ? checks the condition if true and the : seperates the value 
+            to return if the condition is false  */}
             {item.price ? "Get started" : "Contact us"}
           </Button>
 
