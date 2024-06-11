@@ -55,6 +55,9 @@ const Services = () =>
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
                   >
+                    {/* //the image is importing into the webpage. This attruvyte sets wuth width and height and the checks variable that likekely holds to the path 
+                      // An image element for the check icon with specific dimensions
+                    */}
                     <img width={24} height={24} src={check} />
                     <p className="ml-4">{item}</p>
                   </li>
