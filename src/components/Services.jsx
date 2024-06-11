@@ -44,8 +44,13 @@ const Services = () =>
               <p className="body-2 mb-[3rem] text-n-3">
                 Brainwave unlocks the potential of AI-powered applications
               </p>
+              {/* // An unordered list with a specific class for styling */}
               <ul className="body-2">
+                {/* // Mapping over the brainwaveServices array to create a new list item for each service */}
                 {brainwaveServices.map((item, index) => (
+                  // A list item for each service with specific styles:
+                  // using flexbox layout, aligning items to the start,
+                  // applying vertical padding of 4, and a top border with color n-6
                   <li
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
