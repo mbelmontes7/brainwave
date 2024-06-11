@@ -1,3 +1,4 @@
+//tHIS IS THE BRACKETS WHEERE ARE POSITIONS
 const brackets = (position) =>
   position === "left" ? (
     <svg
