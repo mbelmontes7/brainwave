@@ -47,7 +47,7 @@ const Roadmap = () => (
                                 {/* Each card is created within a div with the class md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem]. */}
                                 <div className="relative z-1">
                                     <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
-                                        <Tagline>{item.date}</Tagline>
+                                        {/* // class applies a vertical shift to every even card, moving it down by 7rem on medium screens and above. This creates a staggered effect, making the layout more dynamic and visually interesting. */}
                                         <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
                                             <img
                                                 className="mr-2.5"
