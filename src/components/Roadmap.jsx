@@ -11,7 +11,7 @@ const Roadmap = () => (
         {/* //this is the container of the cards  */}
         <div className="container md:pb-10">
             <Heading tag="Ready to get started" title="What we’re working on" />
-
+            {/* gap-6: Adds spacing between grid items. */}
             <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
                 {roadmap.map((item) =>
                 {
@@ -20,6 +20,8 @@ const Roadmap = () => (
                     return (
                         <div
                             // A conic gradient is a gradient where the colors transition around a center point, creating a cone-like effect. It's different from linear or radial gradients. On the cards around
+                            // Sets the card to use flexbox layout on medium screens and above.
+                            // Sets the card to use flexbox layout on medium screens and above.
                             className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-1"
                                 }`}
                             key={item.id}
