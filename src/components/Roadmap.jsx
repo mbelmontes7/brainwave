@@ -57,7 +57,10 @@ const Roadmap = () => (
                                             <div className="tagline">{status}</div>
                                         </div>
                                     </div>
-
+                                    {/* Applies a margin-bottom to the element. 
+                                    -my-10:Purpose: Applies a negative margin on the top and bottom of the element.
+                                    -mx-15:Purpose: Applies a negative margin on the left and right of the element.
+                                    */}
                                     <div className="mb-10 -my-10 -mx-15">
                                         <img
                                             className="w-full"
