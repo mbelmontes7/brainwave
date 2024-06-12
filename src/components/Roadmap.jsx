@@ -56,6 +56,7 @@ const Roadmap = () => (
                                                 height={16}
                                                 alt={status}
                                             />
+                                            {/* Image container inside the card */}
                                             <div className="tagline">{status}</div>
                                         </div>
                                     </div>
