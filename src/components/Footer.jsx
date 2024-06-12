@@ -22,6 +22,7 @@ const Footer = () =>
                             key={item.id} // Unique key for each social link
                             href={item.url} // URL for the social link
                             target="_blank" // Open link in a new tab
+                            //that is also how you add the transition colors to the icons
                             className="flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-n-6" // Styling for the social link
                         >
                             {/* Image for the social icon */}
