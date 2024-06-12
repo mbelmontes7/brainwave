@@ -5,7 +5,7 @@ import { socials } from "../constants"; // Import the socials array from the con
 const Footer = () =>
 { // Define the Footer component
     return (
-        // Render the Section component with custom padding
+        // Render the Section component with custom padding you put the ! to say no change it this is how is going to go 
         <Section crosses className="!px-0 !py-10">
             {/* Container div for the footer content */}
             <div className="container flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
