@@ -19,11 +19,19 @@ const Roadmap = () => (
 
                     return (
                         <div
-                            // A conic gradient is a gradient where the colors transition around a center point, creating a cone-like effect. It's different from linear or radial gradients. On the cards around the 
+                            // A conic gradient is a gradient where the colors transition around a center point, creating a cone-like effect. It's different from linear or radial gradients. On the cards around
                             className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-1"
                                 }`}
                             key={item.id}
                         >
+                            {/* <!--
+  .relative: Sets the positioning of the element to relative, allowing absolute positioning on its children.
+  .p-8: Applies padding of 2rem (32px) on all sides of the element.
+  .bg-n-8: Sets the background color to a custom color defined in the Tailwind CSS configuration.
+  .rounded-[2.4375rem]: Rounds the corners of the element with a border-radius of 2.4375rem (39px).
+  .overflow-hidden: Hides any content that overflows the bounds of the element.
+  .xl:p-15: Applies pa  dding of 3.75rem (60px) on all sides when the screen size is extra-large (xl) or larger.
+  --> */}
                             <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
                                 <div className="absolute top-0 left-0 max-w-full">
                                     <img
