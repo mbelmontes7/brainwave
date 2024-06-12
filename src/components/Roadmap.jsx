@@ -52,6 +52,7 @@ const Roadmap = () => (
                                     <div className="mb-10 -my-10 -mx-15">
                                         <img
                                             className="w-full"
+                                            //this is where the images are located at inside the cards 
                                             src={item.imageUrl}
                                             width={628}
                                             height={426}
