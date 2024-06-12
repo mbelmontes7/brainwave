@@ -42,6 +42,7 @@ const Roadmap = () => (
                                         alt="Grid"
                                     />
                                 </div>
+                                {/* Each card is created within a div with the class md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem]. */}
                                 <div className="relative z-1">
                                     <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
                                         <Tagline>{item.date}</Tagline>
@@ -60,6 +61,7 @@ const Roadmap = () => (
                                     {/* Applies a margin-bottom to the element. 
                                     -my-10:Purpose: Applies a negative margin on the top and bottom of the element.
                                     -mx-15:Purpose: Applies a negative margin on the left and right of the element.
+
                                     */}
                                     <div className="mb-10 -my-10 -mx-15">
                                         <img
