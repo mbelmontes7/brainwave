@@ -22,6 +22,7 @@ const Roadmap = () => (
                             // A conic gradient is a gradient where the colors transition around a center point, creating a cone-like effect. It's different from linear or radial gradients. On the cards around
                             // Sets the card to use flexbox layout on medium screens and above.
                             // Sets the card to use flexbox layout on medium screens and above.
+                            // class applies a vertical shift to every even card, moving it down by 7rem on medium screens and above. This creates a staggered effect, making the layout more dynamic and visually interesting.
                             className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-1"
                                 }`}
                             key={item.id}
@@ -33,8 +34,7 @@ const Roadmap = () => (
   .rounded-[2.4375rem]: Rounds the corners of the element with a border-radius of 2.4375rem (39px).
   .overflow-hidden: Hides any content that overflows the bounds of the element.
   .xl:p-15: Applies pa  dding of 3.75rem (60px) on all sides when the screen size is extra-large (xl) or larger.
-  --> */}
-                            <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
+  --> */}                      <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
                                 <div className="absolute top-0 left-0 max-w-full">
                                     <img
                                         className="w-full"
@@ -48,7 +48,6 @@ const Roadmap = () => (
                                 <div className="relative z-1">
                                     <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
                                         <Tagline>{item.date}</Tagline>
-
                                         <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
                                             <img
                                                 className="mr-2.5"
