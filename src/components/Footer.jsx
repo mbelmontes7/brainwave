@@ -1,4 +1,4 @@
-import React from "react"; // Import the React library
+
 import Section from "./Section"; // Import the Section component
 import { socials } from "../constants"; // Import the socials array from the constants file
 
