@@ -28,10 +28,10 @@ const Hero = () =>
                 {/* // Button component is rendered in the browser because it's rendered within the Hero component. */}
                 <h1 className="h1 mb-6">
                     {/* stands for non-breaking space it is used to create a space in text that cannot be broken - */}
-                    Explore the Possibilities & of &nbsp;AI&nbsp; chatting with{" "}
-
+                    Hello My name is Magaly {" "}
+                    {/* 
                     <span className="inline-block relative">
-                        Brainwave{" "}
+                        Belmontes{" "}
                         <img
                             src={curve}
                             className="absolute top-full left-0 w-full xl:-mt-2"
@@ -39,7 +39,7 @@ const Hero = () =>
                             height={28}
                             alt="Curve"
                         />
-                    </span>
+                    </span> */}
                 </h1>
                 <p className="body-1 max-w-3xl mx-auto mb-6 text-n-1 lg:mb-8">
                     Unleash the power of AI within Brainwave. Upgrade your productivity
@@ -47,9 +47,9 @@ const Hero = () =>
                 </p>
                 {/* Center the Button component */}
                 <div className="flex justify-center m-10">
-                    <Button href="/pricing" white>
+                    {/* <Button href="/pricing" white>
                         Get started
-                    </Button>
+                    </Button> */}
                 </div>
 
                 {/* //container for the gradient for the rest of the code this is the code for the line hardcore code */}
