@@ -29,7 +29,7 @@ const Hero = () =>
                 <h1 className="h1 mb-6">
                     {/* stands for non-breaking space it is used to create a space in text that cannot be broken - */}
                     Hello My name is Magaly {" "}
-                    {/* 
+
                     <span className="inline-block relative">
                         Belmontes{" "}
                         <img
@@ -39,7 +39,7 @@ const Hero = () =>
                             height={28}
                             alt="Curve"
                         />
-                    </span> */}
+                    </span>
                 </h1>
                 <p className="body-1 max-w-3xl mx-auto mb-6 text-n-1 lg:mb-8">
                     Unleash the power of AI within Brainwave. Upgrade your productivity

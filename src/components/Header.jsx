@@ -58,7 +58,7 @@ const Header = () =>
           { /* This code is used to render an image to the browser. 
     If the image is wrapped in an 'a' tag with a valid 'href', 
     it will also serve as a clickable link. */ }
-          <img src={brainwave} width={190} height={40} alt="brainwave" />
+          {/* <img src={brainwave} width={190} height={40} alt="Per" /> */}
         </a>
         {/* //This is the navigation bar The nav bar was incorrect at first */}
         <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
