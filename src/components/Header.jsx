@@ -58,6 +58,10 @@ const Header = () =>
           { /* This code is used to render an image to the browser. 
     If the image is wrapped in an 'a' tag with a valid 'href', 
     it will also serve as a clickable link. */ }
+          <div>
+
+            Magaly
+          </div>
           {/* <img src={brainwave} width={190} height={40} alt="Per" /> */}
         </a>
         {/* //This is the navigation bar The nav bar was incorrect at first */}
@@ -81,13 +85,13 @@ const Header = () =>
           </div>
           <HamburgerMenu />
         </nav>
-        <a href="#signup"
+        {/* <a href="#signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
           New account
-        </a>
+        </a> */}
         <Button className="hidden lg:flex" href="#login">
-          Sign in
+          About me
         </Button>
         <Button className="ml-auto lg:hidden"
           px="px-3"
